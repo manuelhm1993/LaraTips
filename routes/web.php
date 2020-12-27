@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::name('commons.')->group(function () {
+    Route::get('/', 'Commons\PageController@home')->name('home');
+    Route::get('/nosotros', 'Commons\PageController@about')->name('about');
 });
