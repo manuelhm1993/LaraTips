@@ -9,6 +9,12 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        <style>
+            .active {
+                background: #999;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
