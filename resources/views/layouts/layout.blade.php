@@ -22,11 +22,12 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    {{-- Compara la ruta actual con un patrón --}}
+                    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('commons.home') }}">Home</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('nosotros') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('commons.about') }}">Nosotros</a>
                     </li>
                 </ul>
@@ -35,6 +36,17 @@
         
         <div class="container">
             @yield('content')
+
+            <hr>
+
+            <p>
+                {{-- Retorna la ruta actual --}}
+                La ruta es: {{ request()->path() }}
+            </p>
+
+            <p>
+                La ruta completa es: {{ request()->url() }}
+            </p>
         </div>
     </body>
 </html>
