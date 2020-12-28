@@ -28,12 +28,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    {{-- Compara la ruta actual con un patrón --}}
-                    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+                    <li class="nav-item {{ active('/') }}">
                         <a class="nav-link" href="{{ route('commons.home') }}">Home</a>
                     </li>
 
-                    <li class="nav-item {{ request()->is('nosotros') ? 'active' : '' }}">
+                    <li class="nav-item {{ active('nosotros') }}">
                         <a class="nav-link" href="{{ route('commons.about') }}">Nosotros</a>
                     </li>
                 </ul>
