@@ -9,6 +9,12 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        <style>
+            .active {
+                background: #999;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,12 +28,11 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    {{-- Compara la ruta actual con un patrón --}}
-                    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+                    <li class="nav-item {{ active('/') }}">
                         <a class="nav-link" href="{{ route('commons.home') }}">Home</a>
                     </li>
 
-                    <li class="nav-item {{ request()->is('nosotros') ? 'active' : '' }}">
+                    <li class="nav-item {{ active('nosotros') }}">
                         <a class="nav-link" href="{{ route('commons.about') }}">Nosotros</a>
                     </li>
                 </ul>
