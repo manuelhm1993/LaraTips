@@ -9,11 +9,11 @@ class PageController extends Controller
 {
     public function home()
     {
-
+        return view('commons.home');
     }
 
     public function about()
     {
-
+        return view('commons.about');
     }
 }
