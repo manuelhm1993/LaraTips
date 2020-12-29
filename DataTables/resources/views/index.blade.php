@@ -16,6 +16,7 @@
                         {data: "id"},
                         {data: "name"},
                         {data: "email"},
+                        {data: "btn"},//Implementar botones
                     ]//Campos requeridos
                 });
             }, false);
@@ -31,6 +32,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
+                        <th scope="col">&nbsp;</th>
                     </tr>
                 </thead>
 
