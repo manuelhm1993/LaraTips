@@ -25,7 +25,7 @@
     </head>
     <body>
         <div class="container mt-5">
-            <table id="users" class="table table-striped table-bordered" style="width:100%">
+            <table id="users" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>

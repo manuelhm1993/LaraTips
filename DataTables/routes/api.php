@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/users', function () {
-    //TODO: terminar
+    return datatables()->eloquent(App\User::query())->toJson();
 });
