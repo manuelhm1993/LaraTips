@@ -9,8 +9,10 @@ window._ = require('lodash');
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-
+    
     require('bootstrap');
+
+    window.dt = require( 'datatables.net-bs4' )();
 } catch (e) {}
 
 /**
@@ -22,11 +24,6 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
-/**
- * Importar las datatables
- */
-window.dt = require( 'datatables.net' )();
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
