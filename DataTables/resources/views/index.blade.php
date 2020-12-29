@@ -17,7 +17,18 @@
                         {data: "name"},
                         {data: "email"},
                         {data: "btn"},//Implementar botones
-                    ]//Campos requeridos
+                    ],//Campos requeridos
+                    "language": {
+                        "lengthMenu": "Mostrar _MENU_ registros",
+                        "search":     "Buscar:",
+                        "info":       "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                        "paginate": {
+                            "first":      "Primero",
+                            "last":       "Último",
+                            "next":       "Siguiente",
+                            "previous":   "Anterior"
+                        },
+                    }
                 });
             }, false);
         </script>
