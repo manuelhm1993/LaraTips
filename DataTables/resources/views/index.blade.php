@@ -9,7 +9,15 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script defer>
             window.addEventListener('load', function() {
-                $('#users').DataTable();
+                $('#users').DataTable({
+                    "serverSide": true,//Activar el procesamiento del servidor
+                    "ajax": "{{ url('api/users') }}",//Quien provee la data
+                    "columns": [
+                        {data: "id"},
+                        {data: "name"},
+                        {data: "email"},
+                    ]//Campos requeridos
+                });
             }, false);
         </script>
 
@@ -26,15 +34,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    @foreach ($users as $user)
-                        <tr>
-                            <td>{{ $user->id }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
+                {{-- Al usar AJAX el tbody se creará automáticamente --}}
             </table>
         </div>
     </body>
