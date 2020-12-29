@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $users = App\User::all();
-
-    return view('index', compact('users'));
+    return view('index');
 });
+
+Route::resource('users', 'UserController');

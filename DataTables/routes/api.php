@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/users', function () {
+    /**
+     * Forma de realizar consultas más elaboradas
+     * $model = App\User::where('id', '<=', 30)->where('email', 'like', '%.com');
+     * return datatables()->eloquent($model)->toJson();
+     */
+    return datatables()->eloquent(App\User::query())
+                       ->addColumn('btn', 'actions')//Agrega los botones a su columna
+                       ->rawColumns(['btn'])//Renderiza los botones
+                       ->toJson();
 });
