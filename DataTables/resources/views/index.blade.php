@@ -17,7 +17,29 @@
                         {data: "name"},
                         {data: "email"},
                         {data: "btn"},//Implementar botones
-                    ]//Campos requeridos
+                    ],//Campos requeridos
+                    "language": {
+                        "emptyTable":     "No hay datos disponibles",
+                        "info":       "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                        "infoEmpty":      "Mostrando 0 a 0 de 0 registros",
+                        "infoFiltered":   "(filtrado de _MAX_ total registros)",
+                        "lengthMenu": "Mostrar _MENU_ registros",
+                        "loadingRecords": "Cargando...",
+                        "processing":     "Procesando...",
+                        "search":     "Buscar:",
+                        "zeroRecords":    "No se encontraron resultados",
+                        "paginate": {
+                            "first":      "Primero",
+                            "last":       "Último",
+                            "next":       "Siguiente",
+                            "previous":   "Anterior"
+                        },
+                        /*"lengthMenu": 'Mostrar <select class="form-control">' +
+                                        '<option value="10">10</option>' +
+                                        '<option value="30">30</option>' +
+                                        '<option value="-1">Todos</option>' + 
+                                      '</select> registros',//Control personalizado*/
+                    }
                 });
             }, false);
         </script>
