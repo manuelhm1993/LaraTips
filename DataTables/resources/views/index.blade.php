@@ -20,6 +20,11 @@
                     ],//Campos requeridos
                     "language": {
                         "lengthMenu": "Mostrar _MENU_ registros",
+                        /*"lengthMenu": 'Mostrar <select class="form-control">' +
+                                        '<option value="10">10</option>' +
+                                        '<option value="30">30</option>' +
+                                        '<option value="-1">Todos</option>' + 
+                                      '</select> registros',//Control personalizado*/
                         "search":     "Buscar:",
                         "info":       "Mostrando _START_ a _END_ de _TOTAL_ registros",
                         "paginate": {
