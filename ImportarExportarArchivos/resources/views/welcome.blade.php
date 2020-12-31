@@ -10,7 +10,7 @@
         <h1>Exportar datos</h1>
 
         <p>
-            Click <a href="">aquí</a> para descargar en PDF a los usuarios
+            Click <a href="{{ route('users.pdf') }}">aquí</a> para descargar en PDF a los usuarios
         </p>
     </body>
 </html>
