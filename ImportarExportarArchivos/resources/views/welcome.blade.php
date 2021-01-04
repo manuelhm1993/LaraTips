@@ -12,5 +12,21 @@
         <p>
             Click <a href="{{ route('users.pdf') }}">aquí</a> para descargar en PDF a los usuarios
         </p>
+
+        <p>
+            Click <a href="{{ route('users.excel') }}">aquí</a> para descargar en EXCEL a los usuarios
+        </p>
+
+        <form action="{{ route('users.excel.import') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+            @if (session('message'))
+                <p>{{ session('message') }}</p>
+            @endif
+
+            <input type="file" name="file">
+            
+            <button>Importar usuarios</button>
+        </form>
     </body>
 </html>
