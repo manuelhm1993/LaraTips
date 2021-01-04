@@ -26,4 +26,15 @@ class UserController extends Controller
     {
         return Excel::download(new UsersExport, 'user-list.xlsx');
     }
+
+    //Esperar un Request del formulario
+    public function importEXCEL(Request $request)
+    {
+        $file = $request->file('file');//Recuperar el archivo
+
+        Excel::import(new UsersImport, $file);//Enviar el archivo recibido
+        
+        //Retornar a la vista anterior con un mensaje de feedback
+        return back()->with('message', 'Importación de usuarios completada');
+    }
 }
