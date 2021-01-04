@@ -10,6 +10,7 @@ use App\User;
 
 use Maatwebsite\Excel\Facades\Excel;//Clase que permite usar las herramientas Excel
 use App\Exports\UsersExport;//Clase que exporta usuarios
+use App\Imports\UsersImport;//Clase que importa usuarios
 
 class UserController extends Controller
 {
