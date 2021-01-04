@@ -8,6 +8,9 @@ use Barryvdh\DomPDF\Facade as PDF;//Clase que permite usar las herramientas PDF
 
 use App\User;
 
+use Maatwebsite\Excel\Facades\Excel;//Clase que permite usar las herramientas Excel
+use App\Exports\UsersExport;//Clase que exporta usuarios
+
 class UserController extends Controller
 {
     public function exportPDF()
@@ -21,7 +24,6 @@ class UserController extends Controller
 
     public function exportEXCEL()
     {
-        $users = User::all();
-        return $users;
+        return Excel::download(new UsersExport, 'user-list.xlsx');
     }
 }
