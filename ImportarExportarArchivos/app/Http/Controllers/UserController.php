@@ -18,4 +18,10 @@ class UserController extends Controller
         //El parámetro que recibe es el nombre que tendrá el documento | Descarga la vista
         return $pdf->download('user-list.pdf');
     }
+
+    public function exportEXCEL()
+    {
+        $users = User::all();
+        return $users;
+    }
 }

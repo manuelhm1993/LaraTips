@@ -12,5 +12,9 @@
         <p>
             Click <a href="{{ route('users.pdf') }}">aquí</a> para descargar en PDF a los usuarios
         </p>
+
+        <p>
+            Click <a href="{{ route('users.excel') }}">aquí</a> para descargar en EXCEL a los usuarios
+        </p>
     </body>
 </html>

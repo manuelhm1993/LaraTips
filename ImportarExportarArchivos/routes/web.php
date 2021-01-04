@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::name('users.')->group(function () {
     Route::get('user-list-pdf', 'UserController@exportPDF')->name('pdf');
+    Route::get('user-list-excel', 'UserController@exportEXCEL')->name('excel');
 });
